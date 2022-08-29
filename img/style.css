@@ -1,0 +1,109 @@
+body{
+	margin:0;
+	font-family: sans-serif;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.services{
+	background-color: #eeeeee;
+	min-height: 100vh;
+	width: 100%;
+	float: left;
+	padding:100px 0;
+}
+
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.services .heading{
+	margin-bottom: 60px;
+	width: 100%;
+	float: left;
+}
+.services .heading h1{
+  text-align: center;
+  font-size: 40px;
+  color:#000000;
+  margin:0;
+}
+
+.services .content{
+	float: left;
+	width: 100%;
+}
+.services .content .box{
+	width: 33.33%;
+	float: left;
+	padding:15px;
+}
+.services .content .box .inner{
+	padding:30px;
+	text-align: center;
+	position: relative;
+}
+
+.services .content .box .inner::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom:0;
+	width:0;
+	box-sizing: border-box;
+	height: 0;
+	border-bottom:3px solid transparent;
+	border-left: 3px solid transparent;
+	transition: all .8s ease;
+}
+.services .content .box .inner::after{
+	content: '';
+	position: absolute;
+	right:0;
+	top:0;
+	width:0;
+	box-sizing: border-box;
+	height:0;
+	border-top:3px solid transparent;
+	border-right: 3px solid transparent;
+	transition: all .8s ease;
+}
+.services .content .box:hover .inner::after,
+.services .content .box:hover .inner::before{
+   border-color: red;
+   width: 100%;
+   height: 100%;
+}
+.services .content .box .inner .icon{
+	font-size:50px;
+	color:#000;
+	transition: color .8s ease;
+}
+.services .content .box:hover .inner .icon{
+	color:red;
+}
+.services .content .box .inner h3{
+	font-size: 20px;
+	font-weight: normal;
+	color:#000;
+	margin:20px 0;
+}
+
+.services .content .box .inner p{
+	font-size:15px;
+	color:#444444;
+	line-height:24px;
+}
+
+
+/*responsive*/
+
+@media(max-width: 767px){
+	.services .content .box {
+    width:100%;
+    
+}
+}
+
