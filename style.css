@@ -7,9 +7,11 @@
   /*===== Colores =====*/
 
   --hue-color: 224;
-  --first-color: #9adcff;
+  --first-color: #e43f5as;
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  --color-picker:red;
+  --background-utama:#162447;
+  --color-utama:rgb(12, 11, 11);
+  --color-kedua:#e43f5a;
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
@@ -42,13 +44,14 @@
 
 html {
   scroll-behavior: smooth;
-}
+  }
 
 body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background-color: var(--background-utama);
 }
 
 h1, h2, p {
@@ -75,7 +78,7 @@ img {
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--color-kedua);
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
@@ -113,7 +116,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: #1f4068;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -139,9 +142,6 @@ img {
     transition: .5s;
   }
 
-  .home__title {
-    font-size:20px;
-  }
 
 
 
@@ -150,12 +150,17 @@ img {
 .nav__item {
   margin-bottom: var(--mb-4);
     text-align:center;
+    
 
 }
+.nav__item a{
+  color: var(--color-utama);
 
+}
 .nav__link {
   position: relative;
   color: #fff;
+  
 }
 
 .nav__link:hover {
@@ -172,16 +177,21 @@ img {
   height: 0.19rem;
   left: 0;
   top: 2rem;
-  background-color:var(--first-color);
+  background-color: var(--color-kedua);
  
 }
 
 .nav__logo {
-  color: var(--second-color);
+color: var(--color-kedua);
+font-weight: bold;
+font-size: 18px;
+}
+.nav__logo i {
+  color: rgb(187, 178, 178);
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  color: rgb(187, 178, 178);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -213,11 +223,12 @@ img {
 
 .home__data {
   align-self: center;
-  margin--top:100px;
+  margin-top:100px;
 }
 
 .home__title {
   font-size: 30px;
+  color:rgb(187, 178, 178);
   /* margin-bottom: var(--mb-5); */
 }
 
@@ -249,19 +260,6 @@ img {
   
  
 }
-
-
-.home__blob img {
-  border-radius:200px;
-  
-  
-
-}
-
-
-
-
-
 /*Social Media */
 
   
@@ -286,7 +284,7 @@ img {
 }
 
 .social-icons a:hover{
-  background-color:#000000;
+  background-color:rgb(187, 178, 178);
   box-shadow:2px 2px 12px rgba(0,0,0,0.2);
   transition:all ease 0.5s;
 }
@@ -335,8 +333,8 @@ img {
 /*BUTTONS*/
 .button {
   display: inline-block;
-  background-color:#9adcff;
-  color: #fff;
+  background-color:var(--color-kedua);
+  color: var(--color-utama);
   padding: .75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: .5rem;
@@ -356,11 +354,12 @@ img {
 
 .about__subtitle {
   margin-bottom: var(--mb-2);
+  color: whitesmoke;
   
   
 }
 .about__subtitle span {
-  color: var(--first-color);
+  color: var(--color-kedua);
   
 }
 
@@ -369,10 +368,14 @@ img {
 }
 
 .about__img img {
-  width: 500px;
-  height:350px;
+  width: 450px;
+  height:300px;
   border-radius: .5rem;
   
+}
+.about__text {
+  color:rgb(187, 178, 178);
+  font-size: 16px;
 }
 
 /* ===== SKILLS =====*/
@@ -405,18 +408,22 @@ img {
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
-  color: var(--first-color);
+  color: rgb(187, 178, 178);
 
  
+}
+.skills__percentage {
+  color: rgb(187, 178, 178);
 }
 
 
 .skills__names {
   display: flex;
   align-items: center;
-  
  
-  
+}
+.skills__name {
+  color: rgb(187, 178, 178);
 }
 
 .skills__bar {
@@ -426,25 +433,33 @@ img {
   height: .25rem;
   border-radius: .5rem;
   z-index: var(--z-back);
-  background-color: var(--first-color);
+  background-color: rgb(187, 178, 178);
 
   
 }
-
+.skills__subtitle {
+  color: var(--color-kedua);
+}
+.skills__text {
+  color: rgb(187, 178, 178);
+}
 .skills__html {
   width: 75%;
+  background-color: rgb(187, 178, 178);
   
 
 }
 
 .skills__css {
   width: 60%;
+  background-color: var);
 
 
 }
 
 .skills__js {
   width: 40%;
+  background-color: rgb(187, 178, 178);
 
   
 }
@@ -452,16 +467,19 @@ img {
 .skills__ux {
   width: 80%;
 
+  background-color: rgb(187, 178, 178);
 
 }
 
 .skills__img {
   border-radius: .5rem;
+  background-color: var(--color-kedua);
  
 }
 
 .gambar_skills img {
-    width:500px;
+    width:380px;
+    height: 350px;
     margin:70px;
 }
 
@@ -472,6 +490,7 @@ img {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  color: rgb(187, 178, 178);
 
 }
 
@@ -481,7 +500,7 @@ img {
   
 }
 .footer a {
-  color:var(--first-color)
+  color:var(--color-kedua)
 
 }
 
@@ -506,7 +525,11 @@ img {
   }
   .contact .content .box {
     width:100%;
-    
+       
+}
+.nav__item a{
+  color: rgb(187, 178, 178);
+}
 }
   
  
@@ -540,7 +563,7 @@ img {
       display:none;
     }
    
-  }
+  
   
 
 @media screen and (min-width: 576px) {
@@ -568,7 +591,7 @@ img {
     bottom: 25%;
     display:inline;
     /* border:3px dashed var(--first-color); */
-    border-radius:200px;
+    /* border-radius:200px; */
     
   }
   .home__img {
@@ -646,7 +669,7 @@ img {
     width: 250px;
     bottom: 20%;
     /* border:3px dashed var(--first-color); */
-    border-radius:200px;
+    /* border-radius:200px; */
     top:20%;
   }
 
@@ -690,8 +713,8 @@ img {
     padding: 10rem 0 2rem;
   }
   .home__img img{
-    width: 300px;
-    border-radius:300px;
+    width: 280px;
+    border-radius:30px;
   
   }
 
@@ -712,7 +735,7 @@ img {
     font-weight: 700;
     line-height: 70px;
     letter-spacing: 1px;
-    color:var(--first-color);
+    color:var(--color-kedua);
   }
   
   .animated-text h3:nth-child(1){
@@ -814,7 +837,6 @@ img {
 
 
 .services{
-	background-color: #fff;
 	min-height: 100vh;
 	width: 100%;
 	float: left;
@@ -833,7 +855,7 @@ img {
 .services .heading h1{
   text-align: center;
   font-size: 40px;
-  color:#000000;
+  color:var(--color-utama);
   margin:0;
 }
 
@@ -884,7 +906,7 @@ img {
 }
 .services .content .box .inner .icon{
 	font-size:50px;
-	color:#000;
+	color:rgb(187, 178, 178);
 	transition: color .8s ease;
 }
 .services .content .box:hover .inner .icon{
@@ -893,13 +915,13 @@ img {
 .services .content .box .inner h3{
 	font-size: 20px;
 	font-weight: normal;
-	color:#000;
+	color:rgb(187, 178, 178);
 	margin:20px 0;
 }
 
 .services .content .box .inner p{
 	font-size:15px;
-	color:#444444;
+	color:rgb(187, 178, 178);
 	line-height:24px;
 }
 
